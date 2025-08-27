@@ -13,7 +13,7 @@ model_choice = st.sidebar.selectbox(
         "meta-llama/Llama-2-7b-chat-hf",
         "meta-llama/Llama-2-3b-chat-hf",
         "google/flan-t5-large",
-        "tiiuae/falcon-7b",
+        "tiiuae/falcon-7b-instruct",
         "microsoft/DialoGPT-medium",
         "facebook/blenderbot-90M"
     ]
