@@ -6,15 +6,17 @@ st.set_page_config(page_title="Hugging Face Chatbot", page_icon="🤖")
 st.title("🤖 Hugging Face Multi-Model Chatbot")
 
 # --- Sidebar: Model Selection ---
-st.sidebar.header("Settings")
-models = [
-    "facebook/blenderbot-90M",
-    "microsoft/DialoGPT-medium",
-    "google/flan-t5-large",
-    "EleutherAI/gpt-neo-2.7B",
-    "EleutherAI/gpt-j-6B"
-]
-
+st.sidebar.header("Select a model")
+model_choice = st.sidebar.selectbox(
+    "Choose a model",
+    [
+        "facebook/blenderbot-90M",
+        "microsoft/DialoGPT-medium",
+        "google/flan-t5-large",
+        "EleutherAI/gpt-neo-2.7B",
+        "EleutherAI/gpt-j-6B"
+    ]
+)
 
 # --- Hugging Face API Key from Streamlit Cloud Secrets ---
 hf_api_key = st.secrets["HF_API_KEY"]
