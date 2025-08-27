@@ -7,17 +7,14 @@ st.title("🤖 Hugging Face Multi-Model Chatbot")
 
 # --- Sidebar: Model Selection ---
 st.sidebar.header("Settings")
-model_choice = st.sidebar.selectbox(
-    "Select a model",
-    [
-        "meta-llama/Llama-2-7b-chat-hf",
-        "meta-llama/Llama-2-3b-chat-hf",
-        "google/flan-t5-large",
-        "tiiuae/falcon-7b-instruct",
-        "microsoft/DialoGPT-medium",
-        "facebook/blenderbot-90M"
-    ]
-)
+models = [
+    "facebook/blenderbot-90M",
+    "microsoft/DialoGPT-medium",
+    "google/flan-t5-large",
+    "EleutherAI/gpt-neo-2.7B",
+    "EleutherAI/gpt-j-6B"
+]
+
 
 # --- Hugging Face API Key from Streamlit Cloud Secrets ---
 hf_api_key = st.secrets["HF_API_KEY"]
